@@ -1,9 +1,33 @@
+import { useEffect, useState } from "react";
 import iconMenu from "../assets/icon-hamburger.svg";
 
-export default function Header() {
+export default function Header({ planets, selectedPlanet, onPlanetChange }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header>
+    <header className="flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white p-4">
       <h1 className="text-preset-4 uppercase">the planets</h1>
+
+      <button
+        type="button"
+        aria-label="Open menu"
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        className="sm:hidden cursor-pointer"
+      >
+        <img src={iconMenu} alt="Open menu" />
+      </button>
+
+      <nav className="hidden sm:flex gap-6">
+        {planets.map((planetKey) => (
+          <button
+            key={planetKey}
+            onClick={() => onPlanetChange(planetKey)}
+            className="text-preset-10 uppercase cursor-pointer"
+          >
+            {planetKey}
+          </button>
+        ))}
+      </nav>
     </header>
   );
 }
