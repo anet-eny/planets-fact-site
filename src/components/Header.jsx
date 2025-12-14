@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import iconMenu from "../assets/icon-hamburger.svg";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function Header({ planets, selectedPlanet, onPlanetChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isSmallScreen = useMediaQuery("max-width: 40rem");
+
+  useEffect(() => {
+    if (isMenuOpen && !isSmallScreen) {
+      setIsMenuOpen(false);
+    }
+  }, [isMenuOpen, isSmallScreen]);
 
   return (
     <header className="flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white p-4">
