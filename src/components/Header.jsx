@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import iconMenu from "../assets/icon-hamburger.svg";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import Menu from "./Menu";
 
 export default function Header({ planets, selectedPlanet, onPlanetChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isSmallScreen = useMediaQuery("max-width: 40rem");
+  const isSmallScreen = useMediaQuery("(max-width: 40rem)");
 
   useEffect(() => {
     if (isMenuOpen && !isSmallScreen) {
       setIsMenuOpen(false);
     }
   }, [isMenuOpen, isSmallScreen]);
+  console.log(isMenuOpen);
 
   return (
     <header className="flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white p-4">
@@ -36,6 +38,13 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
           </button>
         ))}
       </nav>
+      <Menu
+        isOpen={isMenuOpen}
+        planets={planets}
+        selectedPlanet={selectedPlanet}
+        onPlanetChange={onPlanetChange}
+        onClose={() => setIsMenuOpen(false)}
+      />
     </header>
   );
 }
