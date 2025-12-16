@@ -3,6 +3,8 @@ import iconMenu from "../assets/icon-hamburger.svg";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import Menu from "./Menu";
 
+const HEADER_PADDING = "1rem";
+
 export default function Header({ planets, selectedPlanet, onPlanetChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width: 40rem)");
@@ -15,7 +17,13 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
   console.log(isMenuOpen);
 
   return (
-    <header className="flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white p-4">
+    <header
+      className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white"
+      style={{
+        "--header-padding": HEADER_PADDING,
+        padding: HEADER_PADDING,
+      }}
+    >
       <h1 className="text-preset-4 uppercase">the planets</h1>
 
       <button

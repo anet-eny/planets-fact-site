@@ -26,7 +26,12 @@ export default function Menu({
   if (!isOpen) return null;
 
   return (
-    <nav className="absolute w-full bg-black z-50">
+    <nav
+      className="absolute top-full w-screen bg-black z-50"
+      style={{
+        marginLeft: "calc(var(--header-padding) * -1)",
+      }}
+    >
       <ul className="flex flex-col">
         {planets.map((planetKey) => (
           <li key={planetKey}>
@@ -36,12 +41,14 @@ export default function Menu({
                 selectedPlanet === planetKey ? "bg-white/5" : ""
               }`}
             >
-              <div>
-                <span
-                  className="w-5 h-5 rounded-full"
+              <div className="flex gap-4 items-center">
+                <div
+                  className="w-4 h-4 rounded-full -translate-y-px"
                   style={{ backgroundColor: planetColors[planetKey] }}
-                ></span>
-                <span className="text-preset-7 text-white">{planetKey}</span>
+                ></div>
+                <span className="text-preset-7 text-white uppercase font-bold">
+                  {planetKey}
+                </span>
               </div>
               <img src={iconChevron} alt="" />
             </button>
