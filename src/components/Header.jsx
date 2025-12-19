@@ -18,7 +18,7 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
 
   return (
     <header
-      className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 bg-black text-white"
+      className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 text-white border-b border-white/20"
       style={{
         "--header-padding": HEADER_PADDING,
         padding: HEADER_PADDING,
