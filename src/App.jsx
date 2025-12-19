@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import TabButtons from "./components/TabButtons";
+import PlanetImage from "./components/PlanetImage";
 import planetsData from "./data/planetsData";
 
 function App() {
@@ -26,7 +27,10 @@ function App() {
         selectedPlanet={selectedPlanet}
         onPlanetChange={handlePlanetChange}
       />
-      <TabButtons activeTab={activeTab} onTabChange={handleTabChange} />
+      <div className="flex flex-col">
+        <TabButtons activeTab={activeTab} onTabChange={handleTabChange} />
+        <PlanetImage selectedPlanet={selectedPlanet} activeTab={activeTab} />
+      </div>
     </div>
   );
 }
