@@ -27,7 +27,11 @@ function App() {
         onPlanetChange={handlePlanetChange}
       />
       <div className="flex flex-col">
-        <TabButtons activeTab={activeTab} onTabChange={handleTabChange} />
+        <TabButtons
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+          selectedPlanet={selectedPlanet}
+        />
         <PlanetImage selectedPlanet={selectedPlanet} activeTab={activeTab} />
       </div>
     </div>
