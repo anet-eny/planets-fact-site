@@ -13,7 +13,6 @@ function App() {
 
   const handlePlanetChange = (planetName) => {
     setSelectedPlanet(planetName);
-    setActiveTab("overview");
   };
 
   const handleTabChange = (tab) => {
