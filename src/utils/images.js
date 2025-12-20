@@ -70,3 +70,14 @@ export const planetImages = {
     geology: geologyNeptune,
   },
 };
+
+export const planetSizes = {
+  mercury: "max-w-[clamp(111px,_30vw,_290px)]",
+  venus: "max-w-[clamp(154px,_40vw,_400px)]",
+  earth: "max-w-[clamp(173px,_45vw,_450px)]",
+  mars: "max-w-[clamp(129px,_35vw,_336px)]",
+  jupiter: "max-w-[clamp(224px,_58vw,_582px)]",
+  saturn: "max-w-[clamp(256px,_66vw,_666px)]",
+  uranus: "max-w-[clamp(176px,_45vw,_458px)]",
+  neptune: "max-w-[clamp(173px,_45vw,_450px)]",
+};
