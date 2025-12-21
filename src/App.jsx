@@ -2,6 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header";
 import TabButtons from "./components/TabButtons";
 import PlanetImage from "./components/PlanetImage";
+import PlanetInfo from "./components/PlanetInfo";
 import planetsData from "./data/planetsData";
 
 function App() {
@@ -33,6 +34,11 @@ function App() {
           selectedPlanet={selectedPlanet}
         />
         <PlanetImage selectedPlanet={selectedPlanet} activeTab={activeTab} />
+        <PlanetInfo
+          name={currentPlanet.name}
+          content={currentContent.content}
+          source={currentContent.source}
+        />
       </div>
     </div>
   );
