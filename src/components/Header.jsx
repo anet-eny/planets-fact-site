@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import iconMenu from "../assets/icon-hamburger.svg";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import Menu from "./Menu";
-
-const HEADER_PADDING = "1rem";
+import { PADDING } from "../utils/constants";
+import iconMenu from "../assets/icon-hamburger.svg";
 
 export default function Header({ planets, selectedPlanet, onPlanetChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +19,8 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
     <header
       className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 text-white border-b border-white/20"
       style={{
-        "--header-padding": HEADER_PADDING,
-        padding: HEADER_PADDING,
+        "--header-padding": PADDING,
+        padding: PADDING,
       }}
     >
       <h1 className="text-preset-4 uppercase">the planets</h1>
