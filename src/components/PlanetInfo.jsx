@@ -1,10 +1,10 @@
 import { PADDING } from "../utils/constants";
 import iconSource from "../assets/icon-source.svg";
 
-export default function PlanetInfo({ name, content, source }) {
+export default function PlanetInfo({ name, content, source, className = "" }) {
   return (
     <div
-      className="flex flex-col items-center text-center"
+      className={`flex flex-col items-center sm:items-start text-center sm:text-left ${className}`}
       style={{ paddingInline: PADDING }}
     >
       <h1 className="text-white text-preset-3 sm:text-preset-2 md:text-preset-1 uppercase mb-4">

@@ -1,6 +1,10 @@
 import { planetImages, planetSizes } from "../utils/images";
 
-export default function PlanetImage({ selectedPlanet, activeTab }) {
+export default function PlanetImage({
+  selectedPlanet,
+  activeTab,
+  className = "",
+}) {
   const images = planetImages[selectedPlanet.toLowerCase()];
   const sizeClass = planetSizes[selectedPlanet.toLowerCase()];
 
@@ -13,11 +17,11 @@ export default function PlanetImage({ selectedPlanet, activeTab }) {
   const mainImage = imageMap[activeTab] || images.planet;
 
   return (
-    <div className="relative mx-auto p-14">
+    <div className={`relative mx-auto p-14 ${className}`}>
       <img
         src={mainImage}
         alt={selectedPlanet}
-        className={`w-full ${sizeClass}`}
+        className={`w-full ${sizeClass} mx-auto`}
       />
       {activeTab === "geology" && (
         <img

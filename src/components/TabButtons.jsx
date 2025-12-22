@@ -1,6 +1,11 @@
 import { planetColors } from "../utils/colors";
 
-export default function TabButtons({ activeTab, onTabChange, selectedPlanet }) {
+export default function TabButtons({
+  activeTab,
+  onTabChange,
+  selectedPlanet,
+  className = "",
+}) {
   const tabs = [
     { id: "overview", label: "Overview", shortLabel: "Overview", number: "01" },
     {
@@ -20,7 +25,9 @@ export default function TabButtons({ activeTab, onTabChange, selectedPlanet }) {
   const planetColor = planetColors[selectedPlanet.toLowerCase()];
 
   return (
-    <div className="flex justify-evenly border-b border-white/20">
+    <div
+      className={`flex justify-evenly border-b border-white/20 ${className}`}
+    >
       {tabs.map((tab) => (
         <button
           key={tab.id}
