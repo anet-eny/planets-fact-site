@@ -27,7 +27,7 @@ function App() {
         selectedPlanet={selectedPlanet}
         onPlanetChange={handlePlanetChange}
       />
-      <div className="flex flex-col sm:grid sm:grid-cols-2">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-[1fr_350px] max-w-4xl mx-auto">
         <TabButtons
           activeTab={activeTab}
           onTabChange={handleTabChange}
