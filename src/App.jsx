@@ -27,23 +27,23 @@ function App() {
         selectedPlanet={selectedPlanet}
         onPlanetChange={handlePlanetChange}
       />
-      <div className="flex flex-col sm:flex-row sm:flex-wrap">
+      <div className="flex flex-col sm:grid sm:grid-cols-2">
         <TabButtons
           activeTab={activeTab}
           onTabChange={handleTabChange}
           selectedPlanet={selectedPlanet}
-          className="sm:order-3 sm:w-1/2"
+          className="sm:col-start-2 sm:row-start-2"
         />
         <PlanetImage
           selectedPlanet={selectedPlanet}
           activeTab={activeTab}
-          className="sm:order-1 sm:w-full"
+          className="sm:col-span-2 sm:row-start-1 md:col-span-1 md:row-span-2 md:row-start-1"
         />
         <PlanetInfo
           name={currentPlanet.name}
           content={currentContent.content}
           source={currentContent.source}
-          className="sm:order-2 sm:w-1/2"
+          className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1"
         />
       </div>
     </div>
