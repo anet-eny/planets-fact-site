@@ -27,7 +27,7 @@ export default function TabButtons({
 
   return (
     <div
-      className={`flex sm:flex-col justify-evenly sm:gap-2 border-b border-white/20 sm:border-none ${className}`}
+      className={`flex sm:flex-col justify-evenly sm:gap-2 md:mt-10 border-b border-white/20 sm:border-none ${className}`}
       style={{ paddingInline: PADDING }}
     >
       {tabs.map((tab) => (
