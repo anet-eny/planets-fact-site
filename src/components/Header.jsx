@@ -17,7 +17,7 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
 
   return (
     <header
-      className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 text-white border-b border-white/20"
+      className="relative flex justify-between sm:flex-col sm:items-center sm:gap-8 md:flex-row text-white border-b border-white/20"
       style={{
         "--header-padding": PADDING,
         padding: PADDING,
@@ -39,7 +39,7 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
           <button
             key={planetKey}
             onClick={() => onPlanetChange(planetKey)}
-            className="text-preset-10 uppercase cursor-pointer"
+            className="text-preset-10 text-white/50 hover:text-white uppercase cursor-pointer"
           >
             {planetKey}
           </button>
