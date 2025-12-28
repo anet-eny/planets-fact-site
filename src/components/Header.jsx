@@ -13,7 +13,6 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
       setIsMenuOpen(false);
     }
   }, [isMenuOpen, isSmallScreen]);
-  console.log(isMenuOpen);
 
   return (
     <header

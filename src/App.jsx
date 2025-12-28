@@ -43,7 +43,8 @@ function App() {
           name={currentPlanet.name}
           content={currentContent.content}
           source={currentContent.source}
-          className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1 "
+          activeTab={activeTab}
+          className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1 md:min-h-[380px]"
         />
       </div>
     </div>
