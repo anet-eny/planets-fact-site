@@ -28,7 +28,7 @@ function App() {
         selectedPlanet={selectedPlanet}
         onPlanetChange={handlePlanetChange}
       />
-      <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-[1fr_350px] max-w-5xl mt-10 mx-auto">
+      <div className="flex flex-col sm:grid sm:grid-cols-2 md:grid-cols-[1.5fr_1fr] max-w-5xl w-full mt-10 mx-auto">
         <TabButtons
           activeTab={activeTab}
           onTabChange={handleTabChange}
@@ -48,7 +48,10 @@ function App() {
           className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1 md:min-h-[380px]"
         />
       </div>
-      <Stats selectedPlanet={selectedPlanet} className="mx-auto max-w-5xl" />
+      <Stats
+        selectedPlanet={selectedPlanet}
+        className="mx-auto max-w-5xl mt-4 md:mt-6"
+      />
     </div>
   );
 }
