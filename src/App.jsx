@@ -22,7 +22,7 @@ function App() {
   };
 
   return (
-    <div className="bg-black">
+    <div className="flex flex-col bg-black">
       <Header
         planets={Object.keys(planetsData)}
         selectedPlanet={selectedPlanet}
@@ -47,8 +47,8 @@ function App() {
           activeTab={activeTab}
           className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1 md:min-h-[380px]"
         />
-        <Stats selectedPlanet={selectedPlanet} />
       </div>
+      <Stats selectedPlanet={selectedPlanet} className="mx-auto max-w-5xl" />
     </div>
   );
 }

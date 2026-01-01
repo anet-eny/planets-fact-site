@@ -13,13 +13,13 @@ export default function Stats({ selectedPlanet, className = "" }) {
 
   return (
     <section
-      className="flex flex-col sm:flex-row gap-1.5 text-white py-6"
+      className={`grid gril-cols-1 sm:grid-cols-4 gap-1.5 w-full text-white py-6 ${className}`}
       style={{ paddingInline: PADDING }}
     >
       {statsData.map((stat) => (
         <div
           key={stat.label}
-          className="flex justify-between items-center border border-white/50 px-4 py-2"
+          className="flex sm:flex-col justify-between items-center sm:items-start border border-white/50 px-4 py-2"
         >
           <span className="text-preset-12 md:text-preset-10 uppercase opacity-50">
             {stat.label}
