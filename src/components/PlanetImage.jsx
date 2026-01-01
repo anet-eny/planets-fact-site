@@ -1,10 +1,12 @@
 import { planetImages, planetSizes } from "../utils/images";
+import { useMediaQuery } from "../hooks/useMediaQuery";
 
 export default function PlanetImage({
   selectedPlanet,
   activeTab,
   className = "",
 }) {
+  const isDesktop = useMediaQuery("(min-width: 48rem)");
   const images = planetImages[selectedPlanet.toLowerCase()];
   const sizeClass = planetSizes[selectedPlanet.toLowerCase()];
 
@@ -27,7 +29,12 @@ export default function PlanetImage({
         <img
           src={images.geology}
           alt={`${selectedPlanet} surface geology`}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 w-1/4"
+          className={`absolute  left-1/2 -translate-x-1/2 w-1/4 ${
+            isDesktop &&
+            (selectedPlanet === "mercury" || selectedPlanet === "mars")
+              ? "bottom-40"
+              : "bottom-8"
+          }`}
         />
       )}
     </div>
