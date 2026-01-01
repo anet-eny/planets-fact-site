@@ -13,14 +13,12 @@ export default function PlanetInfo({
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    // Fade out
     setIsAnimating(false);
 
-    // Změň content a fade in
     const timer = setTimeout(() => {
       setDisplayContent(content);
       setIsAnimating(true);
-    }, 300); // half of animation duration
+    }, 300);
 
     return () => clearTimeout(timer);
   }, [content, activeTab]);
