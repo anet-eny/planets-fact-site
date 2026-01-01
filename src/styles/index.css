@@ -36,7 +36,7 @@
   --text-preset-4--font-family: var(--font-antonio);
 
   /* Preset 5 */
-  --text-preset-5: 1.5rem; /* 24px */
+  --text-preset-5: 1.25rem; /* 20px */
   --text-preset-5--line-height: normal;
   --text-preset-5--font-weight: 500; /* Medium */
   --text-preset-5--letter-spacing: -0.9px;

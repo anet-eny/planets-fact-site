@@ -4,6 +4,7 @@ import TabButtons from "./components/TabButtons";
 import PlanetImage from "./components/PlanetImage";
 import PlanetInfo from "./components/PlanetInfo";
 import planetsData from "./data/planetsData";
+import Stats from "./components/Stats";
 
 function App() {
   const [selectedPlanet, setSelectedPlanet] = useState("earth");
@@ -46,6 +47,7 @@ function App() {
           activeTab={activeTab}
           className="sm:col-start-1 sm:row-start-2 md:col-start-2 md:row-start-1 md:min-h-[380px]"
         />
+        <Stats selectedPlanet={selectedPlanet} />
       </div>
     </div>
   );
