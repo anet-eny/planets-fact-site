@@ -13,8 +13,8 @@ export default function Stats({ selectedPlanet, className = "" }) {
 
   return (
     <section
-      className={`grid gril-cols-1 sm:grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 w-full text-white py-6 ${className}`}
-      style={{ paddingInline: PADDING }}
+      className={`grid gril-cols-1 sm:grid-cols-4 gap-1.5 sm:gap-4 md:gap-6 w-full text-white mt-4 md:mt-6 mb-6 sm:mb-0 ${className}`}
+      style={{ padding: PADDING }}
     >
       {statsData.map((stat) => (
         <div
