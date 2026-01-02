@@ -5,6 +5,7 @@ import PlanetImage from "./components/PlanetImage";
 import PlanetInfo from "./components/PlanetInfo";
 import planetsData from "./data/planetsData";
 import Stats from "./components/Stats";
+import bgStars from "./assets/background-stars.svg";
 
 function App() {
   const [selectedPlanet, setSelectedPlanet] = useState("earth");
@@ -22,7 +23,10 @@ function App() {
   };
 
   return (
-    <div className="flex flex-col bg-black">
+    <div
+      className="flex flex-col bg-black bg-cover bg-center bg-no-repeat min-h-screen"
+      style={{ backgroundImage: `url(${bgStars})` }}
+    >
       <Header
         planets={Object.keys(planetsData)}
         selectedPlanet={selectedPlanet}
