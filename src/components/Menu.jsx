@@ -27,7 +27,7 @@ export default function Menu({
 
   return (
     <nav
-      className="absolute top-full w-screen bg-black z-50"
+      className="absolute top-full w-screen bg-black z-50 shadow-2xl shadow-white/10"
       style={{
         marginLeft: "calc(var(--header-padding) * -1)",
       }}
