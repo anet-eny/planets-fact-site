@@ -39,9 +39,9 @@ export default function TabButtons({
             <button
               onClick={() => onTabChange(tab.id)}
               aria-current={activeTab === tab.id ? "page" : undefined}
-              className={`flex gap-4 text-preset-11 uppercase text-white opacity-50 sm:opacity-100 px-2 sm:px-6 py-4 cursor-pointer border-y-3 border-transparent hover:bg-[oklch(0.8822_0_0/_0.2)] transition-all ${
+              className={`flex w-full gap-4 text-preset-11 uppercase text-white opacity-50 sm:opacity-100 px-2 sm:px-6 py-4 cursor-pointer border-y-3 border-transparent hover:bg-[oklch(0.8822_0_0/_0.2)] transition-all ${
                 activeTab === tab.id
-                  ? "opacity-100 border-b-3 border-b-(--planet-color) sm:border sm:border-transparent sm:bg-(--planet-color) "
+                  ? "opacity-100 border-b-3 border-b-(--planet-color) sm:border sm:border-transparent sm:bg-(--planet-color)"
                   : "opacity-50 sm:border sm:border-white/10 hover:border-transparent"
               }`}
               style={{
