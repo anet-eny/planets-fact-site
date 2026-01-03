@@ -31,13 +31,16 @@ export default function Menu({
       style={{
         marginLeft: "calc(var(--header-padding) * -1)",
       }}
+      aria-label="Mobile planet navigation"
     >
       <ul className="flex flex-col">
         {planets.map((planetKey) => (
           <li key={planetKey}>
             <button
               onClick={() => handlePlanetClick(planetKey)}
-              className={`w-full flex items-center justify-between px-6 py-5 cursor-pointer ${
+              aria-current={selectedPlanet === planetKey ? "page" : undefined}
+              aria-label={`View ${planetKey} information`}
+              className={`w-full flex items-center justify-between px-6 py-5 hover:bg-white/5 cursor-pointer ${
                 selectedPlanet === planetKey ? "bg-white/5" : ""
               }`}
             >
@@ -45,12 +48,13 @@ export default function Menu({
                 <div
                   className="w-4 h-4 rounded-full -translate-y-px"
                   style={{ backgroundColor: planetColors[planetKey] }}
+                  aria-hidden="true"
                 ></div>
                 <span className="text-preset-7 text-white uppercase font-bold">
                   {planetKey}
                 </span>
               </div>
-              <img src={iconChevron} alt="" />
+              <img src={iconChevron} alt="" aria-hidden="true" />
             </button>
           </li>
         ))}
