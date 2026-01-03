@@ -24,7 +24,7 @@ export default function PlanetInfo({
   }, [content, activeTab]);
 
   return (
-    <div
+    <article
       className={`flex flex-col items-center sm:items-start text-center sm:text-left ${className}`}
       style={{ paddingInline: PADDING }}
     >
@@ -40,7 +40,7 @@ export default function PlanetInfo({
       >
         {displayContent}
       </p>
-      <div className="text-preset-9 md:text-preset-8 tracking-normal">
+      <footer className="text-preset-9 md:text-preset-8 tracking-normal">
         <span className=" font-normal text-white/50">Source : </span>
         <a
           href={source}
@@ -51,7 +51,7 @@ export default function PlanetInfo({
           Wikipedia
           <img src={iconSource} alt="" className="inline ml-1" />
         </a>
-      </div>
-    </div>
+      </footer>
+    </article>
   );
 }

@@ -19,7 +19,7 @@ export default function PlanetImage({
   const mainImage = imageMap[activeTab] || images.planet;
 
   return (
-    <div className={`relative mx-auto p-14 ${className}`}>
+    <figure className={`relative mx-auto p-14 ${className}`}>
       <img
         src={mainImage}
         alt={selectedPlanet}
@@ -37,6 +37,6 @@ export default function PlanetImage({
           }`}
         />
       )}
-    </div>
+    </figure>
   );
 }
