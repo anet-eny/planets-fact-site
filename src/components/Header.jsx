@@ -26,7 +26,9 @@ export default function Header({ planets, selectedPlanet, onPlanetChange }) {
 
       <button
         type="button"
-        aria-label="Open menu"
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isMenuOpen}
+        aria-controls="mobile-menu"
         onClick={() => setIsMenuOpen((prev) => !prev)}
         className="sm:hidden cursor-pointer"
       >

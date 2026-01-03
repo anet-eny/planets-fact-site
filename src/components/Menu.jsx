@@ -31,6 +31,7 @@ export default function Menu({
       style={{
         marginLeft: "calc(var(--header-padding) * -1)",
       }}
+      id="mobile-menu"
       aria-label="Mobile planet navigation"
     >
       <ul className="flex flex-col">
