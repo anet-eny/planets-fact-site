@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import iconChevron from "../assets/icon-chevron.svg";
 
 export default function Menu({
@@ -7,6 +8,8 @@ export default function Menu({
   onPlanetChange,
   onClose,
 }) {
+  const firstButtonRef = useRef(null);
+
   const planetColors = {
     mercury: "oklch(0.96 0.02 225)",
     venus: "oklch(0.84 0.09 75)",
@@ -17,6 +20,23 @@ export default function Menu({
     uranus: "oklch(0.88 0.12 180)",
     neptune: "oklch(0.65 0.20 260)",
   };
+
+  useEffect(() => {
+    if (isOpen && firstButtonRef.current) {
+      firstButtonRef.current.focus();
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [isOpen, onClose]);
 
   const handlePlanetClick = (planetKey) => {
     onPlanetChange(planetKey);
@@ -35,9 +55,10 @@ export default function Menu({
       aria-label="Mobile planet navigation"
     >
       <ul className="flex flex-col">
-        {planets.map((planetKey) => (
+        {planets.map((planetKey, index) => (
           <li key={planetKey}>
             <button
+              ref={index === 0 ? firstButtonRef : null}
               onClick={() => handlePlanetClick(planetKey)}
               aria-current={selectedPlanet === planetKey ? "page" : undefined}
               aria-label={`View ${planetKey} information`}
