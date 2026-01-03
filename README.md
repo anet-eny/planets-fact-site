@@ -1,16 +1,50 @@
-# React + Vite
+# Planets Fact Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive web application displaying facts and information about the planets in our solar system, built with **React** and **Tailwind CSS**. This project is a solution to the Planet fact site challenge on [Frontend Mentor](https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Planet Selection**  
+  Navigate between 8 planets through a responsive header menu.
 
-## React Compiler
+- **Tabbed Content Display**  
+  Switch between _Overview_, _Internal Structure_, and _Surface Geology_ views for each planet.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design**  
+  Fully responsive layout optimized for mobile, tablet, and desktop viewport.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Key Learnings
+
+- **React State Management**  
+  Managing multiple state variables (`selectedPlanet`, `activeTab`).
+
+- **Component Architecture**  
+  Breaking down a complex UI into reusable components  
+  (`Header`, `Menu`, `PlanetImage`, `PlanetInfo`, `TabButtons`, `Stats`).
+
+- **CSS Grid & Flexbox**  
+  Creating complex responsive layouts using CSS Grid with custom column templates and Flexbox for component-level layouts.
+
+- **React Hooks**  
+  Using `useState`, `useEffect`, and creating custom hooks like `useMediaQuery` for responsive behavior.
+
+- **Data Transformation**  
+  Converting JSON array data into a keyed object structure for efficient lookups.
+
+- **CSS Custom Properties**  
+  Using CSS variables for dynamic styling and maintaining consistency across components.
+
+- **Import / Export Patterns**  
+  Organizing constants, utilities, and assets for maintainable code structure.
+
+- **Responsive Images**  
+  Managing different image sizes across breakpoints using `clamp()` and `max-width`.
+
+- **Array Methods**  
+  Using `map()`, `reduce()`, and `Object.keys()` for data manipulation and rendering.
+
+---
+
+## View Project
