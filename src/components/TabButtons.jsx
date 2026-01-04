@@ -1,4 +1,4 @@
-import { planetColors } from "../utils/colors";
+import { planetTabColors } from "../utils/colors";
 import { PADDING } from "../utils/constants";
 
 export default function TabButtons({
@@ -7,7 +7,7 @@ export default function TabButtons({
   selectedPlanet,
   className = "",
 }) {
-  const planetColor = planetColors[selectedPlanet.toLowerCase()];
+  const planetColor = planetTabColors[selectedPlanet.toLowerCase()];
 
   const tabs = [
     { id: "overview", label: "Overview", shortLabel: "Overview", number: "01" },

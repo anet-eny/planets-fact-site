@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { planetMenuColors } from "../utils/colors";
 import iconChevron from "../assets/icon-chevron.svg";
 
 export default function Menu({
@@ -9,17 +10,6 @@ export default function Menu({
   onClose,
 }) {
   const firstButtonRef = useRef(null);
-
-  const planetColors = {
-    mercury: "oklch(0.96 0.02 225)",
-    venus: "oklch(0.84 0.09 75)",
-    earth: "oklch(0.56 0.23 275)",
-    mars: "oklch(0.68 0.19 30)",
-    jupiter: "oklch(0.81 0.10 65)",
-    saturn: "oklch(0.86 0.11 80)",
-    uranus: "oklch(0.88 0.12 180)",
-    neptune: "oklch(0.65 0.20 260)",
-  };
 
   useEffect(() => {
     if (isOpen && firstButtonRef.current) {
@@ -69,7 +59,7 @@ export default function Menu({
               <div className="flex gap-4 items-center">
                 <div
                   className="w-4 h-4 rounded-full -translate-y-px"
-                  style={{ backgroundColor: planetColors[planetKey] }}
+                  style={{ backgroundColor: planetMenuColors[planetKey] }}
                   aria-hidden="true"
                 ></div>
                 <span className="text-preset-7 text-white uppercase font-bold">
